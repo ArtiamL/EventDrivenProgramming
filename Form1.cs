@@ -126,8 +126,6 @@ namespace EventDrivenProgramming
         /// <param name="e">Event Arguments</param>
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            int reqEntries = custInfo.Count; //Set number of entries with required data to the number of entries in 'custInfo'.
-
             //Missing information ListBox and Label are displayed.
             if (lstCustError.Visible && lblCheck.Visible)
             {
@@ -135,41 +133,37 @@ namespace EventDrivenProgramming
                 lblCheck.Visible = false; //Hide Label.
             }
 
+            lstCustError.Items.Clear();
+
             //Iterate through each control in the custInfo list.
             foreach (Control ctrl in custInfo)
             {
                 //ctrl is a Textbox
-                if (ctrl is TextBox box)
+                switch (ctrl)
                 {
-                    lstCustError.Items.Remove(box.PlaceholderText); //Remove the value in ListBox that is equal to the placeholder text of the control.
-
-                    //TextBox is empty.
-                    if (box.Text == "")
-                    {
+                    case TextBox box when box.Text == "":   //TextBox is empty.
                         lstCustError.Visible = true; //Display missing information Label.
                         lblCheck.Visible = true; //Display missing information ListBox.
                         lstCustError.Items.Add(box.PlaceholderText); //Add missing information to ListBox.
-                    }
-                    else //TextBox has a value.
-                        reqEntries--; //Reduce required entries by 1.
-                }
-                else if (ctrl is ComboBox comboBox) //ctrl is ComboBox
-                {
-                    lstCustError.Items.Remove("County"); //Remove "county" item from ListBox
-
-                    if (comboBox.SelectedIndex == -1) //User has not selected an item from county ComboBox.
-                    {
+                        break;
+                    case TextBox box when box == txtPhoneNum && !long.TryParse(box.Text, out _):    //txtPhoneNum contains text.
+                        lstCustError.Visible = true; //Display missing information Label.
+                        lblCheck.Visible = true; //Display missing information ListBox.
+                        lstCustError.Items.Add(box.PlaceholderText + " - Not a valid number");  //Add information informing the user does not contain a valid number to ListBox.
+                        break;
+                    case ComboBox comboBox when comboBox.SelectedIndex == -1:   //User has not selected an item from county ComboBox.
                         lstCustError.Visible = true; //Display missing information ListBox.
                         lblCheck.Visible = true; //Display missing information Label.
                         lstCustError.Items.Add("County"); //Add "county" to ListBox.
-                    }
-                    else //User has selected an item in ComboBox.
-                        reqEntries--; //Reduce required entries by 1.
+                        break;
+                    default:
+                        grpDimensions.Enabled = true;
+                        break;
                 }
             }
 
-            if (reqEntries <= 0)    //All information has been entered.
-                grpDimensions.Enabled = true;   //Enable the Room Dimensions GroupBox.
+            //if (reqEntries <= 0)    //All information has been entered.
+                   //Enable the Room Dimensions GroupBox.
         }
 
         /// <summary>

@@ -172,6 +172,7 @@
             txtPhoneNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtPhoneNum.Location = new Point(388, 82);
             txtPhoneNum.Margin = new Padding(5);
+            txtPhoneNum.MaxLength = 11;
             txtPhoneNum.Name = "txtPhoneNum";
             txtPhoneNum.PlaceholderText = "Phone Number";
             txtPhoneNum.Size = new Size(370, 34);
@@ -787,7 +788,6 @@
         private Label lblSurfArea;
         private Label lblArea;
         private Label picSelected;
-        private SaveFileDialog dlgSave;
         private MenuStrip menuStrip;
         private ToolStripMenuItem mItemFile;
         private ToolStripMenuItem tsmiOpen;

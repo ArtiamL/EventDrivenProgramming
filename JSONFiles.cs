@@ -86,7 +86,16 @@ namespace EventDrivenProgramming
             {
                 string filename = openFileDialog.FileName; //Store user's filename.
                 string json = File.ReadAllText(filename); //Deserialize data from JSON format.
-                return JsonSerializer.Deserialize<OrderData?>(json)!; //Return deserialized data as OrderData object.
+                try
+                {
+                    return JsonSerializer.Deserialize<OrderData?>(json)!; //Return deserialized data as OrderData object.
+                }
+                catch (JsonException je)
+                {
+                    string msg = "There was an error reading the file:\n" + je.Message.ToString();    //Set error message to be displayed.
+                    string caption = "Error: Invalid format";  //Set title of error message box.
+                    MessageBox.Show(msg, caption, MessageBoxButtons.OK);    //Show error message box on screen.
+                }
             }
 
             return null;
