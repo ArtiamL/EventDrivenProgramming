@@ -57,7 +57,7 @@ namespace EventDrivenProgramming
                 {
                     Name = "Palazo",
                     Price = 9.99M,
-                    AssignedBtn = btnPalazzo
+                    AssignedBtn = btnPalazo
                 },
 
                 new()
@@ -168,8 +168,8 @@ namespace EventDrivenProgramming
                 }
             }
 
-            if (reqEntries <= 0)
-                grpDimensions.Enabled = true;
+            if (reqEntries <= 0)    //All information has been entered.
+                grpDimensions.Enabled = true;   //Enable the Room Dimensions GroupBox.
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace EventDrivenProgramming
         {
             //Total surface area of the room.
             decimal surfaceArea = (2 * length * height) + (2 * width * height);
-            
+
             //Stores number of rolls required to cover the room.
             decimal numRolls;
 
@@ -288,30 +288,44 @@ namespace EventDrivenProgramming
                 //Calculate number of rolls required when surface area is in metres.
                 numRolls = surfaceArea / Wallpaper.AREA;
 
-            //
+            //Round-up the number of required rolls.
             numRolls = Math.Ceiling(numRolls);
 
-            lblSurfArea.Text = surfaceArea.ToString() + unit;
-            lblRollsRequired.Text = numRolls.ToString();
+            lblSurfArea.Text = surfaceArea.ToString() + unit;   //Convert surface area to a string and display in relevant Label.
+            lblRollsRequired.Text = numRolls.ToString();    //Convert numRolls to string and display in relevant Label.
 
-            if (userSelected != null)
-                lblFinalPrice.Text = "£" + Math.Round((decimal)(userSelected.Price * numRolls)!, 2).ToString();
-            else
-                lblFinalPrice.Text = "Please select a wallpaper.";
+            if (userSelected != null)   //User has selected a wallpaper.
+                lblFinalPrice.Text = "£" + Math.Round((decimal)(userSelected.Price * numRolls)!, 2).ToString(); //Show the total cost to cover the room with the selected wallpaper.
+            else    //User hasn't selected a wallpaper.
+                lblFinalPrice.Text = "Please select a wallpaper.";  //Display text requesting the user to select a wallpaper.
         }
 
+        /// <summary>
+        /// Called when the user focuses (mouse-click or tabs into) on each NumericUpDown control:
+        ///     numLength
+        ///     numWidth
+        ///     numHeight
+        /// </summary>
+        /// <param name="sender">Event Caller</param>
+        /// <param name="e">Event Arguments</param>
         private void numSize_Focus(object sender, EventArgs e)
         {
-            NumericUpDown numSize = (NumericUpDown)sender;
-            numSize.Select(0, numSize.Text.Length);
+            NumericUpDown numSize = (NumericUpDown)sender;  //Get the NumericUpDown control that triggers the event.
+            numSize.Select(0, numSize.Text.Length); //Highlight the text of the control.
         }
 
+        /// <summary>
+        /// Called when the user selects File --> Open in the menuStrip control. Handles the logic for filling out relevant items within the form after opening a file.
+        /// </summary>
+        /// <param name="sender">Event Caller</param>
+        /// <param name="e">Event Arguments</param>
         private void tsmiOpen_Click(object sender, EventArgs e)
         {
-            OrderData? orderData = JSONFiles.OpenJSONFILE()!;
+            OrderData? orderData = JSONFiles.OpenJSONFILE()!;   //Store deserialized data from the opened file.
 
-            if (orderData != null)
+            if (orderData != null)  //orderData contains all required data.
             {
+                //Fills all controls in custInfo with their relevant data.
                 custInfo[0].Text = orderData.FirstName;
                 custInfo[1].Text = orderData.LastName;
                 custInfo[2].Text = orderData.Addr1;
@@ -322,28 +336,37 @@ namespace EventDrivenProgramming
                 custInfo[7].Text = orderData.Email;
                 custInfo[8].Text = orderData.PhoneNum;
 
+                //Set room dimensions from opened file.
                 numLength.Value = orderData.length;
                 numWidth.Value = orderData.width;
                 numHeight.Value = orderData.height;
+
+                //Set selected unit of measurement.
                 rdoMetres.Checked = !orderData.rdo;
                 rdoFeet.Checked = orderData.rdo;
 
-                foreach (var w in from Wallpaper w in Wallpapers 
-                                  where orderData.wallpaper == w.Name 
+                //Select all wallpapers in Wallpapers that match the name of the wallpaper from the opened file. (Should only ever be one match)
+                foreach (var w in from Wallpaper w in Wallpapers
+                                  where orderData.wallpaper == w.Name
                                   select w)
                 {
-                    UpdateWallpaperFields(w);
+                    UpdateWallpaperFields(w);   //Call to update all Labels relating to the user's selected wallpaper.
                 }
 
-                Calculate(orderData.length, orderData.width, orderData.height, orderData.rdo);
+                Calculate(orderData.length, orderData.width, orderData.height, orderData.rdo);  //Call to recalculate and update controls with information from opened file.
             }
         }
 
+        /// <summary>
+        /// Handles click-event for File --> Save As menuStrip control; storing relevant data to a JSON file.
+        /// </summary>
+        /// <param name="sender">Event Caller</param>
+        /// <param name="e">Event Arguments</param>
         private void tsmiSave_Click(object sender, EventArgs e)
         {
-            if (userSelected != null)
+            if (userSelected != null)   //User has selected a wallpaper.
             {
-                OrderData? orderData = new()
+                OrderData? orderData = new()    //Add information to be serialized into JSON format.
                 {
                     FirstName = custInfo[0].Text,
                     LastName = custInfo[1].Text,
@@ -361,14 +384,13 @@ namespace EventDrivenProgramming
                     rdo = rdoFeet.Checked
                 };
 
-                JSONFiles.SaveJSONFile(orderData);
+                JSONFiles.SaveJSONFile(orderData);  //Serialize and save JSON file.
             }
-            else
+            else //User hasn't selected a wallpaper.
             {
-                string msg = "Please ensure all information has been entered.";
-                string caption = "Error: Missing information";
-                MessageBoxButtons messageBoxButtons = MessageBoxButtons.OK;
-                DialogResult result = MessageBox.Show(msg, caption, messageBoxButtons);
+                string msg = "Please ensure you have selected a wallpaper.";    //Set error message to be displayed.
+                string caption = "Error: Missing information";  //Set title of error message box.
+                MessageBox.Show(msg, caption, MessageBoxButtons.OK);    //Show error message box on screen.
             }
         }
     }

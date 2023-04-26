@@ -51,7 +51,7 @@
             btnFeathers = new Button();
             btnMarble = new Button();
             btnBaubau = new Button();
-            btnPalazzo = new Button();
+            btnPalazo = new Button();
             lblSelectedPrice = new Label();
             lblSelected = new Label();
             lblPrice = new Label();
@@ -272,7 +272,7 @@
             grpWallpapers.Controls.Add(btnFeathers);
             grpWallpapers.Controls.Add(btnMarble);
             grpWallpapers.Controls.Add(btnBaubau);
-            grpWallpapers.Controls.Add(btnPalazzo);
+            grpWallpapers.Controls.Add(btnPalazo);
             grpWallpapers.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             grpWallpapers.Location = new Point(786, 12);
             grpWallpapers.Name = "grpWallpapers";
@@ -401,20 +401,20 @@
             btnBaubau.UseVisualStyleBackColor = false;
             btnBaubau.Click += btnWallpaper_Click;
             // 
-            // btnPalazzo
+            // btnPalazo
             // 
-            btnPalazzo.BackColor = SystemColors.Control;
-            btnPalazzo.FlatAppearance.BorderColor = Color.LightSeaGreen;
-            btnPalazzo.FlatAppearance.BorderSize = 0;
-            btnPalazzo.FlatStyle = FlatStyle.Flat;
-            btnPalazzo.ForeColor = SystemColors.ControlText;
-            btnPalazzo.Image = Properties.Resources.Palazo;
-            btnPalazzo.Location = new Point(6, 38);
-            btnPalazzo.Name = "btnPalazzo";
-            btnPalazzo.Size = new Size(218, 218);
-            btnPalazzo.TabIndex = 0;
-            btnPalazzo.UseVisualStyleBackColor = false;
-            btnPalazzo.Click += btnWallpaper_Click;
+            btnPalazo.BackColor = SystemColors.Control;
+            btnPalazo.FlatAppearance.BorderColor = Color.LightSeaGreen;
+            btnPalazo.FlatAppearance.BorderSize = 0;
+            btnPalazo.FlatStyle = FlatStyle.Flat;
+            btnPalazo.ForeColor = SystemColors.ControlText;
+            btnPalazo.Image = Properties.Resources.Palazo;
+            btnPalazo.Location = new Point(6, 38);
+            btnPalazo.Name = "btnPalazo";
+            btnPalazo.Size = new Size(218, 218);
+            btnPalazo.TabIndex = 0;
+            btnPalazo.UseVisualStyleBackColor = false;
+            btnPalazo.Click += btnWallpaper_Click;
             // 
             // lblSelectedPrice
             // 
@@ -700,14 +700,14 @@
             // tsmiOpen
             // 
             tsmiOpen.Name = "tsmiOpen";
-            tsmiOpen.Size = new Size(224, 26);
+            tsmiOpen.Size = new Size(143, 26);
             tsmiOpen.Text = "Open";
             tsmiOpen.Click += tsmiOpen_Click;
             // 
             // tsmiSave
             // 
             tsmiSave.Name = "tsmiSave";
-            tsmiSave.Size = new Size(224, 26);
+            tsmiSave.Size = new Size(143, 26);
             tsmiSave.Text = "Save As";
             tsmiSave.Click += tsmiSave_Click;
             // 
@@ -762,7 +762,7 @@
         private Button btnFeathers;
         private Button btnMarble;
         private Button btnBaubau;
-        private Button btnPalazzo;
+        private Button btnPalazo;
         private Label lblPrice;
         private Label lblWallpaper;
         private ListBox lstCustError;
