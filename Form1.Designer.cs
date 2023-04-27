@@ -104,9 +104,11 @@
             grpCustomerInfo.Controls.Add(txtFirstName);
             grpCustomerInfo.FlatStyle = FlatStyle.Flat;
             grpCustomerInfo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            grpCustomerInfo.Location = new Point(12, 31);
+            grpCustomerInfo.Location = new Point(10, 23);
+            grpCustomerInfo.Margin = new Padding(3, 2, 3, 2);
             grpCustomerInfo.Name = "grpCustomerInfo";
-            grpCustomerInfo.Size = new Size(768, 359);
+            grpCustomerInfo.Padding = new Padding(3, 2, 3, 2);
+            grpCustomerInfo.Size = new Size(672, 269);
             grpCustomerInfo.TabIndex = 1;
             grpCustomerInfo.TabStop = false;
             grpCustomerInfo.Text = "Customer Info";
@@ -116,9 +118,9 @@
             lblCheck.AutoSize = true;
             lblCheck.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblCheck.ForeColor = Color.Red;
-            lblCheck.Location = new Point(388, 129);
+            lblCheck.Location = new Point(340, 97);
             lblCheck.Name = "lblCheck";
-            lblCheck.Size = new Size(244, 28);
+            lblCheck.Size = new Size(195, 21);
             lblCheck.TabIndex = 12;
             lblCheck.Text = "Please check the following:";
             lblCheck.Visible = false;
@@ -128,11 +130,12 @@
             lstCustError.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lstCustError.ForeColor = Color.Red;
             lstCustError.FormattingEnabled = true;
-            lstCustError.ItemHeight = 28;
-            lstCustError.Location = new Point(388, 170);
+            lstCustError.ItemHeight = 21;
+            lstCustError.Location = new Point(340, 128);
+            lstCustError.Margin = new Padding(3, 2, 3, 2);
             lstCustError.Name = "lstCustError";
             lstCustError.SelectionMode = SelectionMode.None;
-            lstCustError.Size = new Size(370, 116);
+            lstCustError.Size = new Size(324, 88);
             lstCustError.TabIndex = 11;
             lstCustError.TabStop = false;
             lstCustError.Visible = false;
@@ -144,9 +147,10 @@
             btnClearInfo.FlatStyle = FlatStyle.Flat;
             btnClearInfo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnClearInfo.ForeColor = Color.Black;
-            btnClearInfo.Location = new Point(139, 298);
+            btnClearInfo.Location = new Point(122, 224);
+            btnClearInfo.Margin = new Padding(3, 2, 3, 2);
             btnClearInfo.Name = "btnClearInfo";
-            btnClearInfo.Size = new Size(123, 45);
+            btnClearInfo.Size = new Size(108, 34);
             btnClearInfo.TabIndex = 10;
             btnClearInfo.Text = "Clear";
             btnClearInfo.UseVisualStyleBackColor = false;
@@ -159,9 +163,10 @@
             btnCustomer.FlatStyle = FlatStyle.Flat;
             btnCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCustomer.ForeColor = Color.White;
-            btnCustomer.Location = new Point(10, 298);
+            btnCustomer.Location = new Point(9, 224);
+            btnCustomer.Margin = new Padding(3, 2, 3, 2);
             btnCustomer.Name = "btnCustomer";
-            btnCustomer.Size = new Size(123, 45);
+            btnCustomer.Size = new Size(108, 34);
             btnCustomer.TabIndex = 9;
             btnCustomer.Text = "Continue";
             btnCustomer.UseVisualStyleBackColor = false;
@@ -170,22 +175,22 @@
             // txtPhoneNum
             // 
             txtPhoneNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPhoneNum.Location = new Point(388, 82);
-            txtPhoneNum.Margin = new Padding(5);
+            txtPhoneNum.Location = new Point(340, 62);
+            txtPhoneNum.Margin = new Padding(4);
             txtPhoneNum.MaxLength = 11;
             txtPhoneNum.Name = "txtPhoneNum";
             txtPhoneNum.PlaceholderText = "Phone Number";
-            txtPhoneNum.Size = new Size(370, 34);
+            txtPhoneNum.Size = new Size(324, 29);
             txtPhoneNum.TabIndex = 8;
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmail.Location = new Point(388, 40);
-            txtEmail.Margin = new Padding(5);
+            txtEmail.Location = new Point(340, 30);
+            txtEmail.Margin = new Padding(4);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "Email Address";
-            txtEmail.Size = new Size(370, 34);
+            txtEmail.Size = new Size(324, 29);
             txtEmail.TabIndex = 7;
             // 
             // cmbCounty
@@ -195,9 +200,10 @@
             cmbCounty.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbCounty.FormattingEnabled = true;
             cmbCounty.Items.AddRange(new object[] { "Aberdeenshire", "Angus", "Antrim", "Argyll & Bute", "Armagh", "Ayrshire", "Banffshire", "Bath and North East Somerset", "Bedfordshire", "Berkshire", "Berwickshire", "Blaenau Gwent", "Borders", "Bridgend", "Bristol", "Buckinghamshire", "Caerphilly", "Caithness", "Cambridgeshire", "Cardiff", "Carmarthenshire", "Ceredigion", "Cheshire", "Clackmannanshire", "Conwy", "Cornwall", "County Durham", "Cumbria", "Denbighshire", "Derbyshire", "Devon", "Dorset", "Down", "Dumfries & Galloway", "Dunbartonshire", "East Ayrshire", "East Dunbartonshire", "East Lothian", "East Renfrewshire", "East Riding of Yorkshire", "East Sussex", "Essex", "Fermanagh", "Fife", "Flintshire", "Gloucestershire", "Greater London", "Greater Manchester", "Gwynedd", "Hampshire", "Herefordshire", "Hertfordshire", "Highland", "Inverclyde", "Isle of Anglesey", "Isle of Wight", "Isles of Scilly", "Kent", "Kincardineshire", "Lanarkshire", "Lancashire", "Leicestershire", "Lincolnshire", "Londonderry", "Merseyside", "Merthyr Tydfil", "Midlothian", "Monmouthshire", "Moray", "Neath Port Talbot.", "Newport.", "Norfolk", "North Ayrshire", "North Lanarkshire", "North Somerset", "North Yorkshire", "Northamptonshire", "Northumberland", "Nottinghamshire", "Orkney", "Oxfordshire", "Pembrokeshire", "Perth & Kinross", "Powys", "Renfrewshire", "Rhondda Cynon Taff", "Rutland", "Shetland", "Shropshire", "Somerset", "South Ayrshire", "South Gloucestershire", "South Lanarkshire", "South Yorkshire", "Staffordshire", "Stirlingshire", "Suffolk", "Surrey", "Swansea", "Torfaen", "Tyne & Wear", "Tyrone", "Vale of Glamorgan", "Warwickshire", "West Dunbartonshire", "West Lothian", "West Midlands", "West Sussex", "West Yorkshire", "Western Isles", "Wiltshire", "Worcestershire", "Wrexham" });
-            cmbCounty.Location = new Point(8, 212);
+            cmbCounty.Location = new Point(7, 159);
+            cmbCounty.Margin = new Padding(3, 2, 3, 2);
             cmbCounty.Name = "cmbCounty";
-            cmbCounty.Size = new Size(370, 36);
+            cmbCounty.Size = new Size(324, 29);
             cmbCounty.Sorted = true;
             cmbCounty.TabIndex = 5;
             // 
@@ -205,62 +211,62 @@
             // 
             txtPostCode.CharacterCasing = CharacterCasing.Upper;
             txtPostCode.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPostCode.Location = new Point(8, 256);
-            txtPostCode.Margin = new Padding(5);
+            txtPostCode.Location = new Point(7, 192);
+            txtPostCode.Margin = new Padding(4);
             txtPostCode.MaxLength = 8;
             txtPostCode.Name = "txtPostCode";
             txtPostCode.PlaceholderText = "Postcode";
-            txtPostCode.Size = new Size(370, 34);
+            txtPostCode.Size = new Size(324, 29);
             txtPostCode.TabIndex = 6;
             // 
             // txtAddrTown
             // 
             txtAddrTown.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtAddrTown.Location = new Point(8, 170);
-            txtAddrTown.Margin = new Padding(5);
+            txtAddrTown.Location = new Point(7, 128);
+            txtAddrTown.Margin = new Padding(4);
             txtAddrTown.Name = "txtAddrTown";
             txtAddrTown.PlaceholderText = "Town/City";
-            txtAddrTown.Size = new Size(370, 34);
+            txtAddrTown.Size = new Size(324, 29);
             txtAddrTown.TabIndex = 4;
             // 
             // txtLastName
             // 
             txtLastName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLastName.Location = new Point(196, 40);
-            txtLastName.Margin = new Padding(5);
+            txtLastName.Location = new Point(172, 30);
+            txtLastName.Margin = new Padding(4);
             txtLastName.Name = "txtLastName";
             txtLastName.PlaceholderText = "Last Name";
-            txtLastName.Size = new Size(182, 34);
+            txtLastName.Size = new Size(160, 29);
             txtLastName.TabIndex = 1;
             // 
             // txtAddr2
             // 
             txtAddr2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtAddr2.Location = new Point(8, 126);
-            txtAddr2.Margin = new Padding(5);
+            txtAddr2.Location = new Point(7, 94);
+            txtAddr2.Margin = new Padding(4);
             txtAddr2.Name = "txtAddr2";
             txtAddr2.PlaceholderText = "Address Line 2";
-            txtAddr2.Size = new Size(370, 34);
+            txtAddr2.Size = new Size(324, 29);
             txtAddr2.TabIndex = 3;
             // 
             // txtAddr1
             // 
             txtAddr1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtAddr1.Location = new Point(8, 82);
-            txtAddr1.Margin = new Padding(5);
+            txtAddr1.Location = new Point(7, 62);
+            txtAddr1.Margin = new Padding(4);
             txtAddr1.Name = "txtAddr1";
             txtAddr1.PlaceholderText = "Address Line 1";
-            txtAddr1.Size = new Size(370, 34);
+            txtAddr1.Size = new Size(324, 29);
             txtAddr1.TabIndex = 2;
             // 
             // txtFirstName
             // 
             txtFirstName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtFirstName.Location = new Point(8, 40);
-            txtFirstName.Margin = new Padding(5);
+            txtFirstName.Location = new Point(7, 30);
+            txtFirstName.Margin = new Padding(4);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.PlaceholderText = "First Name";
-            txtFirstName.Size = new Size(182, 34);
+            txtFirstName.Size = new Size(160, 29);
             txtFirstName.TabIndex = 0;
             // 
             // grpWallpapers
@@ -275,9 +281,11 @@
             grpWallpapers.Controls.Add(btnBaubau);
             grpWallpapers.Controls.Add(btnPalazo);
             grpWallpapers.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            grpWallpapers.Location = new Point(786, 12);
+            grpWallpapers.Location = new Point(688, 9);
+            grpWallpapers.Margin = new Padding(3, 2, 3, 2);
             grpWallpapers.Name = "grpWallpapers";
-            grpWallpapers.Size = new Size(680, 714);
+            grpWallpapers.Padding = new Padding(3, 2, 3, 2);
+            grpWallpapers.Size = new Size(595, 536);
             grpWallpapers.TabIndex = 3;
             grpWallpapers.TabStop = false;
             grpWallpapers.Text = "Wallpapers";
@@ -289,9 +297,10 @@
             btnFaux.FlatAppearance.BorderSize = 0;
             btnFaux.FlatStyle = FlatStyle.Flat;
             btnFaux.Image = Properties.Resources.sample_3d_wooden_beam_charcoal_silver_faux_wood_block_pattern_wallpaper_exclusive_9016_p10052_28698_image;
-            btnFaux.Location = new Point(454, 486);
+            btnFaux.Location = new Point(397, 364);
+            btnFaux.Margin = new Padding(3, 2, 3, 2);
             btnFaux.Name = "btnFaux";
-            btnFaux.Size = new Size(218, 218);
+            btnFaux.Size = new Size(191, 164);
             btnFaux.TabIndex = 8;
             btnFaux.UseVisualStyleBackColor = false;
             btnFaux.Click += btnWallpaper_Click;
@@ -303,9 +312,10 @@
             btnPastel.FlatAppearance.BorderSize = 0;
             btnPastel.FlatStyle = FlatStyle.Flat;
             btnPastel.Image = Properties.Resources.pastel;
-            btnPastel.Location = new Point(230, 486);
+            btnPastel.Location = new Point(201, 364);
+            btnPastel.Margin = new Padding(3, 2, 3, 2);
             btnPastel.Name = "btnPastel";
-            btnPastel.Size = new Size(218, 218);
+            btnPastel.Size = new Size(191, 164);
             btnPastel.TabIndex = 7;
             btnPastel.TabStop = false;
             btnPastel.UseVisualStyleBackColor = false;
@@ -318,9 +328,10 @@
             btnGeometry.FlatAppearance.BorderSize = 0;
             btnGeometry.FlatStyle = FlatStyle.Flat;
             btnGeometry.Image = Properties.Resources.marino_geometric_squares_grey_wallpaper_by_fine_decor_fd42391_p3166_12788_image;
-            btnGeometry.Location = new Point(6, 486);
+            btnGeometry.Location = new Point(5, 364);
+            btnGeometry.Margin = new Padding(3, 2, 3, 2);
             btnGeometry.Name = "btnGeometry";
-            btnGeometry.Size = new Size(218, 218);
+            btnGeometry.Size = new Size(191, 164);
             btnGeometry.TabIndex = 6;
             btnGeometry.TabStop = false;
             btnGeometry.UseVisualStyleBackColor = false;
@@ -333,9 +344,10 @@
             btnLines.FlatAppearance.BorderSize = 0;
             btnLines.FlatStyle = FlatStyle.Flat;
             btnLines.Image = Properties.Resources.lines;
-            btnLines.Location = new Point(454, 262);
+            btnLines.Location = new Point(397, 196);
+            btnLines.Margin = new Padding(3, 2, 3, 2);
             btnLines.Name = "btnLines";
-            btnLines.Size = new Size(218, 218);
+            btnLines.Size = new Size(191, 164);
             btnLines.TabIndex = 5;
             btnLines.TabStop = false;
             btnLines.UseVisualStyleBackColor = false;
@@ -348,9 +360,10 @@
             btnFlowers.FlatAppearance.BorderSize = 0;
             btnFlowers.FlatStyle = FlatStyle.Flat;
             btnFlowers.Image = Properties.Resources.julia_miller_yond_interiors_wallpaper_floral_in_bathroom;
-            btnFlowers.Location = new Point(230, 262);
+            btnFlowers.Location = new Point(201, 196);
+            btnFlowers.Margin = new Padding(3, 2, 3, 2);
             btnFlowers.Name = "btnFlowers";
-            btnFlowers.Size = new Size(218, 218);
+            btnFlowers.Size = new Size(191, 164);
             btnFlowers.TabIndex = 4;
             btnFlowers.TabStop = false;
             btnFlowers.UseVisualStyleBackColor = false;
@@ -363,9 +376,10 @@
             btnFeathers.FlatAppearance.BorderSize = 0;
             btnFeathers.FlatStyle = FlatStyle.Flat;
             btnFeathers.Image = Properties.Resources.Ekran_Resmi_2023_01_30_18_48_26;
-            btnFeathers.Location = new Point(6, 262);
+            btnFeathers.Location = new Point(5, 196);
+            btnFeathers.Margin = new Padding(3, 2, 3, 2);
             btnFeathers.Name = "btnFeathers";
-            btnFeathers.Size = new Size(218, 218);
+            btnFeathers.Size = new Size(191, 164);
             btnFeathers.TabIndex = 3;
             btnFeathers.TabStop = false;
             btnFeathers.UseVisualStyleBackColor = false;
@@ -378,9 +392,10 @@
             btnMarble.FlatAppearance.BorderSize = 0;
             btnMarble.FlatStyle = FlatStyle.Flat;
             btnMarble.Image = Properties.Resources.Blue_marble;
-            btnMarble.Location = new Point(454, 38);
+            btnMarble.Location = new Point(397, 28);
+            btnMarble.Margin = new Padding(3, 2, 3, 2);
             btnMarble.Name = "btnMarble";
-            btnMarble.Size = new Size(218, 218);
+            btnMarble.Size = new Size(191, 164);
             btnMarble.TabIndex = 2;
             btnMarble.TabStop = false;
             btnMarble.UseVisualStyleBackColor = false;
@@ -394,9 +409,10 @@
             btnBaubau.FlatStyle = FlatStyle.Flat;
             btnBaubau.ForeColor = Color.Black;
             btnBaubau.Image = Properties.Resources._51100128_Tropical_White_Baubauwall_Wallpaper_room3_3;
-            btnBaubau.Location = new Point(230, 38);
+            btnBaubau.Location = new Point(201, 28);
+            btnBaubau.Margin = new Padding(3, 2, 3, 2);
             btnBaubau.Name = "btnBaubau";
-            btnBaubau.Size = new Size(218, 218);
+            btnBaubau.Size = new Size(191, 164);
             btnBaubau.TabIndex = 1;
             btnBaubau.TabStop = false;
             btnBaubau.UseVisualStyleBackColor = false;
@@ -410,9 +426,10 @@
             btnPalazo.FlatStyle = FlatStyle.Flat;
             btnPalazo.ForeColor = SystemColors.ControlText;
             btnPalazo.Image = Properties.Resources.Palazo;
-            btnPalazo.Location = new Point(6, 38);
+            btnPalazo.Location = new Point(5, 28);
+            btnPalazo.Margin = new Padding(3, 2, 3, 2);
             btnPalazo.Name = "btnPalazo";
-            btnPalazo.Size = new Size(218, 218);
+            btnPalazo.Size = new Size(191, 164);
             btnPalazo.TabIndex = 0;
             btnPalazo.UseVisualStyleBackColor = false;
             btnPalazo.Click += btnWallpaper_Click;
@@ -421,39 +438,39 @@
             // 
             lblSelectedPrice.AutoSize = true;
             lblSelectedPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSelectedPrice.Location = new Point(594, 156);
-            lblSelectedPrice.Margin = new Padding(5);
+            lblSelectedPrice.Location = new Point(520, 117);
+            lblSelectedPrice.Margin = new Padding(4);
             lblSelectedPrice.Name = "lblSelectedPrice";
-            lblSelectedPrice.Size = new Size(0, 28);
+            lblSelectedPrice.Size = new Size(0, 21);
             lblSelectedPrice.TabIndex = 21;
             // 
             // lblSelected
             // 
             lblSelected.AutoSize = true;
             lblSelected.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSelected.Location = new Point(594, 76);
-            lblSelected.Margin = new Padding(5);
+            lblSelected.Location = new Point(520, 57);
+            lblSelected.Margin = new Padding(4);
             lblSelected.Name = "lblSelected";
-            lblSelected.Size = new Size(0, 28);
+            lblSelected.Size = new Size(0, 21);
             lblSelected.TabIndex = 19;
             // 
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(594, 114);
-            lblPrice.Margin = new Padding(5);
+            lblPrice.Location = new Point(520, 86);
+            lblPrice.Margin = new Padding(4);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(70, 32);
+            lblPrice.Size = new Size(58, 25);
             lblPrice.TabIndex = 20;
             lblPrice.Text = "Price:";
             // 
             // lblWallpaper
             // 
             lblWallpaper.AutoSize = true;
-            lblWallpaper.Location = new Point(594, 40);
-            lblWallpaper.Margin = new Padding(5);
+            lblWallpaper.Location = new Point(520, 30);
+            lblWallpaper.Margin = new Padding(4);
             lblWallpaper.Name = "lblWallpaper";
-            lblWallpaper.Size = new Size(125, 32);
+            lblWallpaper.Size = new Size(102, 25);
             lblWallpaper.TabIndex = 18;
             lblWallpaper.Text = "Wallpaper:";
             // 
@@ -482,9 +499,11 @@
             grpDimensions.Controls.Add(lblLength);
             grpDimensions.Enabled = false;
             grpDimensions.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            grpDimensions.Location = new Point(12, 396);
+            grpDimensions.Location = new Point(10, 297);
+            grpDimensions.Margin = new Padding(3, 2, 3, 2);
             grpDimensions.Name = "grpDimensions";
-            grpDimensions.Size = new Size(768, 330);
+            grpDimensions.Padding = new Padding(3, 2, 3, 2);
+            grpDimensions.Size = new Size(672, 248);
             grpDimensions.TabIndex = 2;
             grpDimensions.TabStop = false;
             grpDimensions.Text = "Room Dimensions";
@@ -493,18 +512,18 @@
             // 
             picSelected.BackColor = Color.White;
             picSelected.BorderStyle = BorderStyle.FixedSingle;
-            picSelected.Location = new Point(368, 38);
+            picSelected.Location = new Point(322, 28);
             picSelected.Name = "picSelected";
-            picSelected.Size = new Size(218, 218);
+            picSelected.Size = new Size(191, 164);
             picSelected.TabIndex = 17;
             // 
             // lblFinalPrice
             // 
             lblFinalPrice.AutoSize = true;
             lblFinalPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFinalPrice.Location = new Point(133, 241);
+            lblFinalPrice.Location = new Point(116, 181);
             lblFinalPrice.Name = "lblFinalPrice";
-            lblFinalPrice.Size = new Size(0, 28);
+            lblFinalPrice.Size = new Size(0, 21);
             lblFinalPrice.TabIndex = 15;
             // 
             // btnClearDims
@@ -514,9 +533,10 @@
             btnClearDims.FlatStyle = FlatStyle.Flat;
             btnClearDims.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnClearDims.ForeColor = Color.Black;
-            btnClearDims.Location = new Point(137, 275);
+            btnClearDims.Location = new Point(120, 206);
+            btnClearDims.Margin = new Padding(3, 2, 3, 2);
             btnClearDims.Name = "btnClearDims";
-            btnClearDims.Size = new Size(123, 45);
+            btnClearDims.Size = new Size(108, 34);
             btnClearDims.TabIndex = 16;
             btnClearDims.Text = "Clear";
             btnClearDims.UseVisualStyleBackColor = false;
@@ -526,9 +546,9 @@
             // 
             lblCost.AutoSize = true;
             lblCost.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCost.Location = new Point(8, 239);
+            lblCost.Location = new Point(7, 179);
             lblCost.Name = "lblCost";
-            lblCost.Size = new Size(119, 31);
+            lblCost.Size = new Size(98, 25);
             lblCost.TabIndex = 13;
             lblCost.Text = "Total Cost:";
             // 
@@ -539,9 +559,10 @@
             btnCalculate.FlatStyle = FlatStyle.Flat;
             btnCalculate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCalculate.ForeColor = Color.White;
-            btnCalculate.Location = new Point(8, 275);
+            btnCalculate.Location = new Point(7, 206);
+            btnCalculate.Margin = new Padding(3, 2, 3, 2);
             btnCalculate.Name = "btnCalculate";
-            btnCalculate.Size = new Size(123, 45);
+            btnCalculate.Size = new Size(108, 34);
             btnCalculate.TabIndex = 15;
             btnCalculate.Text = "Calculate";
             btnCalculate.UseVisualStyleBackColor = false;
@@ -551,18 +572,18 @@
             // 
             lblRollsRequired.AutoSize = true;
             lblRollsRequired.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblRollsRequired.Location = new Point(197, 203);
+            lblRollsRequired.Location = new Point(172, 152);
             lblRollsRequired.Name = "lblRollsRequired";
-            lblRollsRequired.Size = new Size(0, 28);
+            lblRollsRequired.Size = new Size(0, 21);
             lblRollsRequired.TabIndex = 12;
             // 
             // lblRolls
             // 
             lblRolls.AutoSize = true;
             lblRolls.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblRolls.Location = new Point(8, 203);
+            lblRolls.Location = new Point(7, 152);
             lblRolls.Name = "lblRolls";
-            lblRolls.Size = new Size(183, 28);
+            lblRolls.Size = new Size(146, 21);
             lblRolls.TabIndex = 11;
             lblRolls.Text = "Total Rolls required:";
             // 
@@ -570,18 +591,18 @@
             // 
             lblSurfArea.AutoSize = true;
             lblSurfArea.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSurfArea.Location = new Point(186, 165);
+            lblSurfArea.Location = new Point(163, 124);
             lblSurfArea.Name = "lblSurfArea";
-            lblSurfArea.Size = new Size(0, 28);
+            lblSurfArea.Size = new Size(0, 21);
             lblSurfArea.TabIndex = 10;
             // 
             // lblArea
             // 
             lblArea.AutoSize = true;
             lblArea.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblArea.Location = new Point(8, 165);
+            lblArea.Location = new Point(7, 124);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(172, 28);
+            lblArea.Size = new Size(137, 21);
             lblArea.TabIndex = 9;
             lblArea.Text = "Total Surface Area:";
             // 
@@ -590,9 +611,10 @@
             rdoFeet.AutoSize = true;
             rdoFeet.CheckAlign = ContentAlignment.MiddleRight;
             rdoFeet.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            rdoFeet.Location = new Point(196, 74);
+            rdoFeet.Location = new Point(172, 56);
+            rdoFeet.Margin = new Padding(3, 2, 3, 2);
             rdoFeet.Name = "rdoFeet";
-            rdoFeet.Size = new Size(70, 32);
+            rdoFeet.Size = new Size(57, 25);
             rdoFeet.TabIndex = 8;
             rdoFeet.TabStop = true;
             rdoFeet.Text = "Feet";
@@ -604,9 +626,10 @@
             rdoMetres.CheckAlign = ContentAlignment.MiddleRight;
             rdoMetres.Checked = true;
             rdoMetres.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            rdoMetres.Location = new Point(196, 36);
+            rdoMetres.Location = new Point(172, 27);
+            rdoMetres.Margin = new Padding(3, 2, 3, 2);
             rdoMetres.Name = "rdoMetres";
-            rdoMetres.Size = new Size(93, 32);
+            rdoMetres.Size = new Size(76, 25);
             rdoMetres.TabIndex = 7;
             rdoMetres.TabStop = true;
             rdoMetres.Text = "Metres";
@@ -616,9 +639,10 @@
             // 
             numHeight.DecimalPlaces = 2;
             numHeight.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            numHeight.Location = new Point(90, 118);
+            numHeight.Location = new Point(79, 88);
+            numHeight.Margin = new Padding(3, 2, 3, 2);
             numHeight.Name = "numHeight";
-            numHeight.Size = new Size(98, 34);
+            numHeight.Size = new Size(86, 29);
             numHeight.TabIndex = 6;
             numHeight.TextAlign = HorizontalAlignment.Center;
             numHeight.Click += numSize_Focus;
@@ -628,10 +652,10 @@
             // 
             lblHeight.AutoSize = true;
             lblHeight.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblHeight.Location = new Point(7, 120);
-            lblHeight.Margin = new Padding(5);
+            lblHeight.Location = new Point(6, 90);
+            lblHeight.Margin = new Padding(4);
             lblHeight.Name = "lblHeight";
-            lblHeight.Size = new Size(75, 28);
+            lblHeight.Size = new Size(59, 21);
             lblHeight.TabIndex = 5;
             lblHeight.Text = "Height:";
             // 
@@ -639,9 +663,10 @@
             // 
             numWidth.DecimalPlaces = 2;
             numWidth.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            numWidth.Location = new Point(90, 78);
+            numWidth.Location = new Point(79, 58);
+            numWidth.Margin = new Padding(3, 2, 3, 2);
             numWidth.Name = "numWidth";
-            numWidth.Size = new Size(98, 34);
+            numWidth.Size = new Size(86, 29);
             numWidth.TabIndex = 4;
             numWidth.TextAlign = HorizontalAlignment.Center;
             numWidth.Click += numSize_Focus;
@@ -651,10 +676,10 @@
             // 
             lblwidth.AutoSize = true;
             lblwidth.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblwidth.Location = new Point(6, 80);
-            lblwidth.Margin = new Padding(5);
+            lblwidth.Location = new Point(5, 60);
+            lblwidth.Margin = new Padding(4);
             lblwidth.Name = "lblwidth";
-            lblwidth.Size = new Size(70, 28);
+            lblwidth.Size = new Size(55, 21);
             lblwidth.TabIndex = 3;
             lblwidth.Text = "Width:";
             // 
@@ -662,9 +687,10 @@
             // 
             numLength.DecimalPlaces = 2;
             numLength.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            numLength.Location = new Point(90, 38);
+            numLength.Location = new Point(79, 28);
+            numLength.Margin = new Padding(3, 2, 3, 2);
             numLength.Name = "numLength";
-            numLength.Size = new Size(98, 34);
+            numLength.Size = new Size(86, 29);
             numLength.TabIndex = 2;
             numLength.TextAlign = HorizontalAlignment.Center;
             numLength.Click += numSize_Focus;
@@ -674,10 +700,10 @@
             // 
             lblLength.AutoSize = true;
             lblLength.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLength.Location = new Point(6, 40);
-            lblLength.Margin = new Padding(5);
+            lblLength.Location = new Point(5, 30);
+            lblLength.Margin = new Padding(4);
             lblLength.Name = "lblLength";
-            lblLength.Size = new Size(76, 28);
+            lblLength.Size = new Size(61, 21);
             lblLength.TabIndex = 1;
             lblLength.Text = "Length:";
             // 
@@ -687,7 +713,8 @@
             menuStrip.Items.AddRange(new ToolStripItem[] { mItemFile });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
-            menuStrip.Size = new Size(1477, 28);
+            menuStrip.Padding = new Padding(5, 2, 0, 2);
+            menuStrip.Size = new Size(1292, 24);
             menuStrip.TabIndex = 0;
             menuStrip.Text = "menuStrip1";
             // 
@@ -695,34 +722,35 @@
             // 
             mItemFile.DropDownItems.AddRange(new ToolStripItem[] { tsmiOpen, tsmiSave });
             mItemFile.Name = "mItemFile";
-            mItemFile.Size = new Size(46, 24);
+            mItemFile.Size = new Size(37, 20);
             mItemFile.Text = "File";
             // 
             // tsmiOpen
             // 
             tsmiOpen.Name = "tsmiOpen";
-            tsmiOpen.Size = new Size(143, 26);
+            tsmiOpen.Size = new Size(114, 22);
             tsmiOpen.Text = "Open";
             tsmiOpen.Click += tsmiOpen_Click;
             // 
             // tsmiSave
             // 
             tsmiSave.Name = "tsmiSave";
-            tsmiSave.Size = new Size(143, 26);
+            tsmiSave.Size = new Size(114, 22);
             tsmiSave.Text = "Save As";
             tsmiSave.Click += tsmiSave_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1477, 737);
+            ClientSize = new Size(1292, 553);
             Controls.Add(grpDimensions);
             Controls.Add(grpWallpapers);
             Controls.Add(menuStrip);
             Controls.Add(grpCustomerInfo);
             MainMenuStrip = menuStrip;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "Form1";
             Text = "Wallpaper Warehouse";
