@@ -51,7 +51,7 @@
             btnFeathers = new Button();
             btnMarble = new Button();
             btnBaubau = new Button();
-            btnPalazo = new Button();
+            btnPalazzo = new Button();
             lblSelectedPrice = new Label();
             lblSelected = new Label();
             lblPrice = new Label();
@@ -279,7 +279,7 @@
             grpWallpapers.Controls.Add(btnFeathers);
             grpWallpapers.Controls.Add(btnMarble);
             grpWallpapers.Controls.Add(btnBaubau);
-            grpWallpapers.Controls.Add(btnPalazo);
+            grpWallpapers.Controls.Add(btnPalazzo);
             grpWallpapers.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             grpWallpapers.Location = new Point(688, 9);
             grpWallpapers.Margin = new Padding(3, 2, 3, 2);
@@ -420,19 +420,19 @@
             // 
             // btnPalazo
             // 
-            btnPalazo.BackColor = SystemColors.Control;
-            btnPalazo.FlatAppearance.BorderColor = Color.LightSeaGreen;
-            btnPalazo.FlatAppearance.BorderSize = 0;
-            btnPalazo.FlatStyle = FlatStyle.Flat;
-            btnPalazo.ForeColor = SystemColors.ControlText;
-            btnPalazo.Image = Properties.Resources.Palazo;
-            btnPalazo.Location = new Point(5, 28);
-            btnPalazo.Margin = new Padding(3, 2, 3, 2);
-            btnPalazo.Name = "btnPalazo";
-            btnPalazo.Size = new Size(191, 164);
-            btnPalazo.TabIndex = 0;
-            btnPalazo.UseVisualStyleBackColor = false;
-            btnPalazo.Click += btnWallpaper_Click;
+            btnPalazzo.BackColor = SystemColors.Control;
+            btnPalazzo.FlatAppearance.BorderColor = Color.LightSeaGreen;
+            btnPalazzo.FlatAppearance.BorderSize = 0;
+            btnPalazzo.FlatStyle = FlatStyle.Flat;
+            btnPalazzo.ForeColor = SystemColors.ControlText;
+            btnPalazzo.Image = Properties.Resources.Palazo;
+            btnPalazzo.Location = new Point(5, 28);
+            btnPalazzo.Margin = new Padding(3, 2, 3, 2);
+            btnPalazzo.Name = "btnPalazo";
+            btnPalazzo.Size = new Size(191, 164);
+            btnPalazzo.TabIndex = 0;
+            btnPalazzo.UseVisualStyleBackColor = false;
+            btnPalazzo.Click += btnWallpaper_Click;
             // 
             // lblSelectedPrice
             // 
@@ -791,7 +791,7 @@
         private Button btnFeathers;
         private Button btnMarble;
         private Button btnBaubau;
-        private Button btnPalazo;
+        private Button btnPalazzo;
         private Label lblPrice;
         private Label lblWallpaper;
         private ListBox lstCustError;

@@ -55,9 +55,9 @@ public partial class Form1 : Form
         {
             new()
             {
-                Name = "Palazo",
+                Name = "Palazzo",
                 Price = 9.99M,
-                AssignedBtn = btnPalazo
+                AssignedBtn = btnPalazzo
             },
 
             new()
@@ -271,7 +271,7 @@ public partial class Form1 : Form
         decimal numRolls;
 
         //Default unit of measurement (metres)
-        string unit = "m";
+        string unit = "m\u00b2";
 
         //RadioButton is checked (Feet selected).
         if (rdo)
@@ -280,7 +280,7 @@ public partial class Form1 : Form
             numRolls = surfaceArea / (Wallpaper.AREA * 10.76391M);
 
             //Set unit of measurement to feet.
-            unit = "ft";
+            unit = "ft\u00b2";
         }
         //RadioButton rdoMetres is checked.
         else
@@ -309,7 +309,7 @@ public partial class Form1 : Form
     /// <param name="e">Event Arguments</param>
     private void numSize_Focus(object sender, EventArgs e)
     {
-        NumericUpDown numSize = (NumericUpDown)sender;  //Get the NumericUpDown control that triggers the event.
+        NumericUpDown numSize = (NumericUpDown)sender;  //Get the NumericUpDown control that triggered the event.
         numSize.Select(0, numSize.Text.Length); //Highlight the text of the control.
     }
 
